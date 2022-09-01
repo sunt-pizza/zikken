@@ -117,7 +117,16 @@ changeTxt();
 document.addEventListener('DOMContentLoaded', showNextTxt, false);
 
 // 220829追記
-window.onload = function () {
-    let classCount = document.getElementsByClassName("slide-count").length;
-    console.log(classCount);
+// window.onload = function () {
+//     let classCount = document.getElementsByClassName("slide-count").length;
+//     console.log(classCount);
+//     let num_all = document.getElementById("count_num_all");
+//     num_all.textContent = "<p>新しい要素</p>";
+// }
+
+window.onload = function test() {
+    let num_all = document.getElementsByClassName("slide-count").length;
+    console.log(num_all);
+    let num_all_text = document.getElementsByClassName("slide-count").length;
+    document.getElementsByClassName('count_num_all').innerText = num_all;
 }
