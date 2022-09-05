@@ -73,61 +73,60 @@
 // }
 
 // スライドショーのアニメーション
-// function classToggle() {
-//     var el = document.querySelector('.icon-cards__content');
-//     el.classList.toggle('step-animation');
-// }
+function classToggle() {
+    var el = document.querySelector('.icon-cards__content');
+    el.classList.toggle('step-animation');
+}
 
 // document.querySelector('#toggle-animation').addEventListener('click', classToggle);
 
-// -------------------------------------
 // スライド数のカウント
-const txts = document.getElementsByClassName('text');
-console.log(txts);
+const txts = document.getElementsByClassName('icon-cards__item');
+// console.log(txts);
 let txtIndex = -1;
 
-// -------------------------------------
-// テキストのカウント出し分け処理
 function changeTxt() {
     txtIndex++;
     // console.log(txtIndex);
     // console.log(txts.length);
     let currentNum = txtIndex % txts.length;
-    console.log(currentNum);
+    // console.log(currentNum);
     let nextNum = (txtIndex + 1) % txts.length;
     // console.log(nextNum);
     let current = txts[currentNum];
     // console.log(current);
     let next = txts[nextNum];
 
-    setTimeout(function () {
-        current.classList.remove('is-active');
-    }, 100);
-    setTimeout(function () {
-        current.style.display = 'none';
-        next.style.display = 'block';
-    }, 100);
-    setTimeout(function () {
-        next.classList.add('is-active');
-    }, 100);
+    // setTimeout(function () {
+    //     current.classList.remove('is-active');
+    // }, 100);
+    // setTimeout(function () {
+    //     current.style.display = 'none';
+    //     next.style.display = 'block';
+    // }, 100);
+    // setTimeout(function () {
+    //     next.classList.add('is-active');
+    // }, 100);
 }
 
-// -------------------------------------
-// 3秒ごとにカウントの出し分けをする処理「changeTxt」を実行
-let test_num = 0;
+function showNextTxt() {
+    setInterval(changeTxt, 3000);
+}
 
-if (test_num > 3 ) {
-    function showNextTxt() {
-        setInterval(changeTxt, 5000);
-    };
-} else {
-    function showNextTxt() {
-        setInterval(changeTxt, 3000);
-    };
-    test_num++;
-};
-
-// -------------------------------------
-// コンテンツが読み込んだら「changeTxt」を処理
 changeTxt();
 document.addEventListener('DOMContentLoaded', showNextTxt, false);
+
+// 220829追記
+// window.onload = function () {
+//     let classCount = document.getElementsByClassName("slide-count").length;
+//     console.log(classCount);
+//     let num_all = document.getElementById("count_num_all");
+//     num_all.textContent = "<p>新しい要素</p>";
+// }
+
+window.onload = function test() {
+    let num_all = document.getElementsByClassName("slide-count").length;
+    console.log(num_all);
+    let num_all_text = document.getElementsByClassName("slide-count").length;
+    document.getElementsByClassName('count_num_all').innerText = num_all;
+}

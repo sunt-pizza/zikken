@@ -100,13 +100,13 @@ function changeTxt() {
     setTimeout(function () {
         current.classList.remove('is-active');
     }, 100);
-    // setTimeout(function () {
-    //     current.style.display = 'none';
-    //     next.style.display = 'block';
-    // }, 100);
-    // setTimeout(function () {
-    //     next.classList.add('is-active');
-    // }, 100);
+    setTimeout(function () {
+        current.style.display = 'none';
+        next.style.display = 'block';
+    }, 100);
+    setTimeout(function () {
+        next.classList.add('is-active');
+    }, 100);
 }
 
 function showNextTxt() {
