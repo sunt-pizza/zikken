@@ -114,18 +114,21 @@ function changeTxt() {
 
 // -------------------------------------
 // 3秒ごとにカウントの出し分けをする処理「changeTxt」を実行
-let test_num = 0;
+for (i = 0; i < 100; i++){
+    if (i >= 2 ) {
+        function showNextTxt() {
+            setInterval(changeTxt, 5000);
+            console.log('カウントチェック', test_num);
+            let i = 0
+        };
+    } else {
+        function showNextTxt() {
+            setInterval(changeTxt, 3000);
+        };
+    };
+}
 
-if (test_num > 3 ) {
-    function showNextTxt() {
-        setInterval(changeTxt, 5000);
-    };
-} else {
-    function showNextTxt() {
-        setInterval(changeTxt, 3000);
-    };
-    test_num++;
-};
+
 
 // -------------------------------------
 // コンテンツが読み込んだら「changeTxt」を処理

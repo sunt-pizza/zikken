@@ -117,13 +117,8 @@ main .main_description {
   transform-origin: center;
   transform-style: preserve-3d;
   transform: translateZ(-30vw) rotateY(0);
-  -webkit-animation: carousel 10s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
-  animation: carousel 10s infinite ease-in 1s running forwards;
-}
-
-.icon-cards__content.step-animation {
-  -webkit-animation: carousel 8s infinite steps(1) forwards;
-  animation: carousel 8s infinite steps(1) running forwards;
+  -webkit-animation: carousel 10s infinite ease-in running forwards;
+          animation: carousel 10s infinite ease-in running forwards;
 }
 
 .icon-cards__item {
@@ -167,30 +162,30 @@ main .main_description {
 }
 
 @-webkit-keyframes carousel {
-  0%, 17.5% {
+  0%, 17% {
     transform: translateZ(-35vw) rotateY(0);
   }
-  27.5%, 45% {
+  27%, 45% {
     transform: translateZ(-35vw) rotateY(-120deg);
   }
-  55%, 72.5% {
+  55%, 72% {
     transform: translateZ(-35vw) rotateY(-240deg);
   }
-  82.5%, 100% {
+  82%, 100% {
     transform: translateZ(-35vw) rotateY(-360deg);
   }
 }
 @keyframes carousel {
-  0%, 17.5% {
+  0%, 17% {
     transform: translateZ(-35vw) rotateY(0);
   }
-  27.5%, 45% {
+  27%, 45% {
     transform: translateZ(-35vw) rotateY(-120deg);
   }
-  55%, 72.5% {
+  55%, 72% {
     transform: translateZ(-35vw) rotateY(-240deg);
   }
-  82.5%, 100% {
+  82%, 100% {
     transform: translateZ(-35vw) rotateY(-360deg);
   }
 }
