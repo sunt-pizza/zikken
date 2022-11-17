@@ -131,6 +131,7 @@ body {
     transform: translate(0, -50%);
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
+    z-index: 2;
 }
 
 main {
@@ -166,98 +167,7 @@ main {
     width: 100%;
     height: 100%;
     transform-origin: center;
-    transform-style: preserve-3d;
-    transform: translateZ(-30vw) rotateY(0);
-    // -webkit-animation: carousel 10s infinite cubic-bezier(0.77, 0, 0.175, 1)  forwards;
-    animation: carousel 10s infinite ease-in running forwards;
 }
-
-// .icon-cards__content.step-animation {
-//     -webkit-animation: carousel 8s infinite steps(1) forwards;
-//     animation: carousel 8s infinite steps(1) running forwards;
-// }
-
-.icon-cards__item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 60vw;
-    height: 40vw;
-    max-width: 500px;
-    max-height: 500px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 6px;
-    transform-origin: center;
-    ul {
-        position: absolute;
-        bottom: -50px;
-    }
-}
-
-// スライドの指定
-.icon-cards__item:nth-child(1) {
-    background-image: url(../img/default.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: rotateY(0) translateZ(35vw); // ３Dの角度
-}
-
-.icon-cards__item:nth-child(2) {
-    background-image: url(../img/default.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: rotateY(120deg) translateZ(35vw); // ３Dの角度
-}
-
-.icon-cards__item:nth-child(3) {
-    background-image: url(../img/default.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: rotateY(240deg) translateZ(35vw); // ３Dの角度
-}
-// スライドの指定 END
-
-// アニメーションの動きについて
-@-webkit-keyframes carousel {
-    0%,
-    17% {
-        transform: translateZ(-35vw) rotateY(0);
-    }
-    27%,
-    45% {
-        transform: translateZ(-35vw) rotateY(-120deg);
-    }
-    55%,
-    72% {
-        transform: translateZ(-35vw) rotateY(-240deg);
-    }
-    82%,
-    100% {
-        transform: translateZ(-35vw) rotateY(-360deg);
-    }
-}
-
-@keyframes carousel {
-    0%,
-    17% {
-        transform: translateZ(-35vw) rotateY(0);
-    }
-    27%,
-    45% {
-        transform: translateZ(-35vw) rotateY(-120deg);
-    }
-    55%,
-    72% {
-        transform: translateZ(-35vw) rotateY(-240deg);
-    }
-    82%,
-    100% {
-        transform: translateZ(-35vw) rotateY(-360deg);
-    }
-}
-// アニメーションの動きについて END
 
 html,
 body {
@@ -272,117 +182,10 @@ body {
     background: #110f15;
 }
 
-.checkbox {
-    display: none;
-    position: relative;
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #f47956;
-    transition: color 0.3s ease;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.checkbox:hover {
-    color: #f7a95a;
-}
-
-.checkbox__checkbox {
-    position: relative;
-    top: 0;
-    width: 1.0625rem;
-    height: 1.0625rem;
-    background: white;
-    border: 1px solid currentColor;
-    border-radius: 4px;
-    vertical-align: middle;
-    transition: background 0.1s ease;
-    cursor: pointer;
-}
-
-.checkbox__checkbox::after {
-    content: "";
-    position: absolute;
-    top: 1px;
-    left: 5px;
-    width: 5px;
-    height: 11px;
-    opacity: 0;
-    transform: rotate(45deg) scale(0);
-    border-right: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-    transition: all 0.3s ease;
-    transition-delay: 0.15s;
-}
-
 .checkbox__label {
     margin-left: 5px;
     vertical-align: middle;
     cursor: pointer;
-}
-
-.checkbox>input:checked~.checkbox__checkbox {
-    border-color: transparent;
-    background: #f47956;
-    -webkit-animation: jelly 0.6s ease;
-    animation: jelly 0.6s ease;
-}
-
-.checkbox>input:checked~.checkbox__checkbox:after {
-    opacity: 1;
-    transform: rotate(45deg) scale(1);
-}
-
-@-webkit-keyframes jelly {
-    from {
-        transform: scale(1, 1);
-    }
-    30% {
-        transform: scale(1.25, 0.75);
-    }
-    40% {
-        transform: scale(0.75, 1.25);
-    }
-    50% {
-        transform: scale(1.15, 0.85);
-    }
-    65% {
-        transform: scale(0.95, 1.05);
-    }
-    75% {
-        transform: scale(1.05, 0.95);
-    }
-    to {
-        transform: scale(1, 1);
-    }
-}
-
-@keyframes jelly {
-    from {
-        transform: scale(1, 1);
-    }
-    30% {
-        transform: scale(1.25, 0.75);
-    }
-    40% {
-        transform: scale(0.75, 1.25);
-    }
-    50% {
-        transform: scale(1.15, 0.85);
-    }
-    65% {
-        transform: scale(0.95, 1.05);
-    }
-    75% {
-        transform: scale(1.05, 0.95);
-    }
-    to {
-        transform: scale(1, 1);
-    }
 }
 
 // スライド数カウント END
@@ -455,3 +258,130 @@ footer {
 }
 
 // フッター END
+
+
+
+// カルーセルの追記221117
+body {
+    background: #333;
+    padding: 70px 0;
+    font: 15px/20px Arial, sans-serif;
+  }
+  
+  .container {
+    margin: 0 auto;
+    width: 40vw;
+    height: 50vh;
+    max-width: 560px;
+    max-height: 610px;
+    position: relative;
+    perspective: 1000px;
+  }
+  
+  .carousel {
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+  
+  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    font-size: 5em;
+    text-align: center;
+    color: #FFF;
+    opacity: 0.95;
+    border-radius: 10px;
+    a {
+        width: 100%;
+        height: 100%;
+    }
+    p {
+        &.carousel_title {
+            position: absolute;
+            bottom: 30px;
+            left: -30px;
+            padding: 5px;
+            font-size: 2rem;
+            background-color: #222222;
+        }
+        &.carousel_category {
+            position: absolute;
+            bottom: -30px;
+            left: -20px;
+            font-size: 1.4rem;
+        }
+        &.carousel_date {
+            position: absolute;
+            bottom: -30px;
+            right: 0px;
+            font-size: 1.4rem;
+        }
+    }
+  }
+  
+  .a {
+    transform: rotateY(0deg) translateZ(250px);
+    background: #ed1c24;
+    background-image: url(../img/dammy.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .b {
+    transform: rotateY(120deg) translateZ(250px);
+    background: #0072bc;
+    background-image: url(../img/dammy.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .c {
+    transform: rotateY(240deg) translateZ(250px);
+    background: #39b54a;
+    background-image: url(../img/dammy.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+//   .d {
+//     transform: rotateY(180deg) translateZ(250px);
+//     background: #f26522;
+//   }
+//   .e {
+//     transform: rotateY(240deg) translateZ(250px);
+//     background: #630460;
+//   } 
+//   .f {
+//     transform: rotateY(300deg) translateZ(250px);
+//     background: #8c6239;
+//   }
+  
+  .next, .prev {
+    color: #444;
+    position: absolute;
+    top: 100px;
+    padding: 1em 2em;
+    cursor: pointer;
+    background: #CCC;
+    border-radius: 5px;
+    border-top: 1px solid #FFF;
+    box-shadow: 0 5px 0 #999;
+    transition: box-shadow 0.1s, top 0.1s;
+  }
+  .next:hover, .prev:hover { color: #000; }
+  .next:active, .prev:active {
+    top: 104px;
+    box-shadow: 0 1px 0 #999;
+  }
+  .next { right: 5em; }
+  .prev { left: 5em; }
+// カルーセルの追記221117 END

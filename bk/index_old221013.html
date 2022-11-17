@@ -23,11 +23,12 @@
 
     <!-- css読み込み -->
     <link rel="stylesheet" media="all" href="css/destyle.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/> -->
     <link rel="stylesheet" media="all" href="css/style.css">
 
     <!-- js読み込み -->
-    <!-- <script src="js/common.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/common.js"></script>
 
 </head>
 
@@ -43,30 +44,48 @@
         <main>
             <h2 class="main_description">デザイナーとエンジニアが<br class="pc">勉強・やりたい表現を試すことを<br class="pc">目的とした実験場である。</h2>
 
-
-
-            <!-- カルーセル部分 -->
-            <div class="container">
-                <div class="carousel">
-                    <div class="item a"><a href="#">
-                        <p class="carousel_title">表現タイトル表現タイトル表現タイトル表現タイトル</p>
-                        <p class="carousel_category">JavaScript.3DCG</p><p class="carousel_date">2022.00.00</p>
-                    </a></div>
-                    <div class="item b"><a href="#">
-                        <p class="carousel_title">表現タイトル表現タイトル表現タイトル表現タイトル</p>
-                        <p class="carousel_category">JavaScript.3DCG</p><p class="carousel_date">2022.00.00</p>
-                    </a></div>
-                    <div class="item c"><a href="#">
-                        <p class="carousel_title">表現タイトル表現タイトル表現タイトル表現タイトル</p>
-                        <p class="carousel_category">JavaScript.3DCG</p><p class="carousel_date">2022.00.00</p>
-                    </a></div>
+            <!-- カルーセル -->
+            <!-- カルーセルの画像 -->
+            <figure class="icon-cards mt-3">
+                <div id="target" class="icon-cards__content">
+                    <div class="icon-cards__item d-flex align-items-center justify-content-center slide-count">
+                        <a href="https://www.amazon.co.jp/" target="_blank">
+                            <ul>
+                                <li class="item_title">項目１<br>ダミー</li>
+                                <li class="item_tech">javascript. 3DCG. three.js</li>
+                                <li class="item_date">2022.00.00</li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="icon-cards__item d-flex align-items-center justify-content-center slide-count">
+                        <a href="https://www.amazon.co.jp/" target="_blank">
+                            <ul>
+                                <li class="item_title">項目２<br>ダミー</li>
+                                <li class="item_tech">javascript. 3DCG. three.js</li>
+                                <li class="item_date">2022.00.00</li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="icon-cards__item d-flex align-items-center justify-content-center slide-count">
+                        <a href="https://www.amazon.co.jp/" target="_blank">
+                            <ul>
+                                <li class="item_title">項目３<br>ダミー</li>
+                                <li class="item_tech">javascript. 3DCG. three.js</li>
+                                <li class="item_date">2022.00.00</li>
+                            </ul>
+                        </a>
+                    </div>
                 </div>
+            </figure>
+
+            <div class="checkbox">
+                <input class="d-none" id="toggle-animation" type="checkbox" />
+                <label class="checkbox__checkbox" for="toggle-animation"></label>
+                <label class="checkbox__label" for="toggle-animation">Toggle animation</label>
             </div>
-            <div class="next">Next</div>
-            <div class="prev">Prev</div>
-            <!-- カルーセル部分 END -->
 
-
+            <!-- カルーセルの画像 END -->
+            <!-- カルーセル END -->
 
             <!-- スライド数カウント -->
             <div class="count_num_wrap">
@@ -77,18 +96,12 @@
                 </div>
             </div>
             <!-- スライド数カウント -->
-
-
         </main>
 
         <footer id="footer">
             <p>© 2022 jikkenjo.web</p>
         </footer>
     </div>
-
-    <!-- JavaScript読み込み -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="js/common.js"></script>
 </body>
 
 </html>

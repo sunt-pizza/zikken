@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- アナリティクス追加場所 -->
+
+    <!-- アナリティクス追加場所 END -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="デザイナーとエンジニアが勉強・やりたい表現を試すことを目的とした実験場である">
+    <meta name="format-detection" content="telephone=no">
+    <title>実験場 | やりたいことを試す場所</title>
+    <link rel="shortcut icon" type="image/svg+xml" sizes="any" href="img/favicon.ico" />
+    <link rel="apple-touch-icon" href="img/favicon.ico">
+    <meta property="og:image" content="img/ogp.jpg">
+
+    <!-- Google font 読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+
+    <!-- css読み込み -->
+    <link rel="stylesheet" media="all" href="css/destyle.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/> -->
+    <link rel="stylesheet" media="all" href="css/style.css">
+
+    <!-- js読み込み -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script> -->
+
+</head>
+
+<body>
+    <div class="inner">
+
+        <header>
+            <div class="title">
+                <h1><img src="img/ttl.png" alt="実験場 jikkenjo.web"></h1>
+            </div>
+        </header>
+
+        <main>
+            <h2 class="main_description">デザイナーとエンジニアが<br class="pc">勉強・やりたい表現を試すことを<br class="pc">目的とした実験場である。</h2>
+
+
+            <!-- スライダーのダミー -->
+            <style>
+                /* .swiper {
+                    width: 600px;
+                    height: 300px;
+                } */
+                .swiper-slide {
+                    background-color: #8d8d8d;
+                }
+            </style>
+            <!-- <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-scrollbar"></div>
+            </div> -->
+            <!-- スライダーのダミー -->
+
+            
+            <!-- カルーセル -->
+            <!-- カルーセルの画像 -->
+            <figure class="swiper icon-cards mt-3">
+                <div id="target" class="swiper-wrapper icon-cards__content">
+                    <div class="swiper-slide icon-cards__item d-flex align-items-center justify-content-center slide-count" data-swiper-autoplay="2000">
+                        <a href="https://www.amazon.co.jp/" target="_blank">
+                            <ul>
+                                <li class="item_title">項目１<br>ダミー</li>
+                                <li class="item_tech">javascript. 3DCG. three.js</li>
+                                <li class="item_date">2022.00.00</li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="swiper-slide icon-cards__item d-flex align-items-center justify-content-center slide-count">
+                        <a href="https://www.amazon.co.jp/" target="_blank">
+                            <ul>
+                                <li class="item_title">項目２<br>ダミー</li>
+                                <li class="item_tech">javascript. 3DCG. three.js</li>
+                                <li class="item_date">2022.00.00</li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="swiper-slide icon-cards__item d-flex align-items-center justify-content-center slide-count">
+                        <a href="https://www.amazon.co.jp/" target="_blank">
+                            <ul>
+                                <li class="item_title">項目３<br>ダミー</li>
+                                <li class="item_tech">javascript. 3DCG. three.js</li>
+                                <li class="item_date">2022.00.00</li>
+                            </ul>
+                        </a>
+                    </div>
+                </div>
+            </figure>
+
+            <!-- <div class="checkbox">
+                <input class="d-none" id="toggle-animation" type="checkbox" />
+                <label class="checkbox__checkbox" for="toggle-animation"></label>
+                <label class="checkbox__label" for="toggle-animation">Toggle animation</label>
+            </div> -->
+
+            <!-- カルーセルの画像 END -->
+            <!-- カルーセル END -->
+
+            <!-- スライド数カウント -->
+            <div class="count_num_wrap">
+                <div class="">
+                    <p class="text"><span class="count_num_all">03</span><span class="count_num_border">/</span><span class="count_num_now is-active">01</span></p>
+                    <p class="text"><span class="count_num_all">03</span><span class="count_num_border">/</span><span class="count_num_now">02</span></p>
+                    <p class="text"><span class="count_num_all">03</span><span class="count_num_border">/</span><span class="count_num_now">03</span></p>
+                </div>
+            </div>
+            <!-- スライド数カウント -->
+
+
+        </main>
+
+        <footer id="footer">
+            <p>© 2022 jikkenjo.web</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>
