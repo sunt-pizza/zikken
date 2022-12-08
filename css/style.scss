@@ -207,6 +207,18 @@ body {
     }
 }
 
+// 共通部分
+// ------------------------
+.next {
+    display: none;
+}
+.prev {
+    display: none;
+}
+// ------------------------
+// 共通部分
+
+
 // スライド数カウント
 // ------------------------
 .count_num_wrap {
@@ -233,16 +245,14 @@ body {
 }
 
 .text {
-    // opacity: 0;
-    display: none;
-    -webkit-transition: opacity 10s ease;
-    transition: opacity 10s ease;
-    &.is-active {
-        // opacity: 1;
-        display: block;
-        -webkit-transition: opacity 10s ease;
-        transition: opacity 10s ease;
-    }
+    // display: none;
+    // -webkit-transition: opacity 10s ease;
+    // transition: opacity 10s ease;
+    // &.is-active {
+    //     display: block;
+    //     -webkit-transition: opacity 10s ease;
+    //     transition: opacity 10s ease;
+    // }
 }
 
 // ------------------------

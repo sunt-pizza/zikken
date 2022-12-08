@@ -150,6 +150,14 @@ body {
   max-width: 450px;
 }
 
+.next {
+  display: none;
+}
+
+.prev {
+  display: none;
+}
+
 .count_num_wrap {
   position: absolute;
   right: 70px;
@@ -171,15 +179,6 @@ body {
 }
 .count_num_wrap .count_num_now {
   font-size: 4.2rem;
-}
-
-.text {
-  display: none;
-  transition: opacity 10s ease;
-}
-.text.is-active {
-  display: block;
-  transition: opacity 10s ease;
 }
 
 footer {
