@@ -18,7 +18,7 @@
     <!-- Google font 読み込み -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
 
     <!-- css読み込み -->
@@ -43,7 +43,10 @@
         <main>
             <h2 class="main_description">デザイナーとエンジニアが<br class="pc">勉強・やりたい表現を試すことを<br class="pc">目的とした実験場である。</h2>
 
-
+            <!-- 背景のライン -->
+            <div class="face front"><img src="img/line.png" alt="背景のライン"></div>
+            <!-- <div class="face back"><img src="img/line_back.png" alt="背景のライン"></div> -->
+            <!-- 背景のライン END -->
 
             <!-- カルーセル部分 -->
             <div class="container">
@@ -71,12 +74,40 @@
             <!-- スライド数カウント -->
             <div class="count_num_wrap">
                 <div class="">
-                    <p class="text"><span id="count_num_all" class="count_num_all">01</span><span class="count_num_border">/</span><span class="count_num_now" id="count_num_now">01</span></p>
-                    <!-- <p class="text"><span class="count_num_all">03</span><span class="count_num_border">/</span><span class="count_num_now">02</span></p>
-                    <p class="text"><span class="count_num_all">03</span><span class="count_num_border">/</span><span class="count_num_now">03</span></p> -->
+                    <p class="text">
+                        <span id="count_num_all" class="count_num_all">01</span>
+                        <span class="count_num_now" id="count_num_now">01</span>
+                    </p>
                 </div>
             </div>
             <!-- スライド数カウント -->
+
+            
+            <!-- 円形に表示するやつ -->
+            <div class="circle-wrap">
+                <div class="circle-right">
+                    <div class="circle-right-hidden">
+                        <div class="circle">
+                            <div class="test">
+                                <span id="count_num_all" class="count_num_all">01</span>
+                                <span class="count_num_now" id="count_num_now">01</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="circle-left">
+                    <div class="circle-left-hidden">
+                        <div class="circle">
+                            <div class="test">
+                                <span id="count_num_all" class="count_num_all">01</span>
+                                <span class="count_num_now" id="count_num_now">01</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 円形に表示するやつ END -->
+
 
 
         </main>

@@ -46,22 +46,3 @@ i++;
 }
 // 数字のカウント END
 
-// 4秒ごとにスライドにクラスを付与
-$(function(){
-
-  let s = $('#carousel .item');
-  let n = s.length;
-
-  function replaceAddClass(i) {
-    s.eq(i).siblings().removeClass('front_slide');
-    s.eq(i).addClass('front_slide');
-  }
-
-  let i = 0; replaceAddClass(i);
-  setInterval(function(){
-    i++;
-    if ( !(i < n) ) { i = 0; }
-    replaceAddClass(i);
-  }, 4000);
-
-});

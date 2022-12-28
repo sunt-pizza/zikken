@@ -88,9 +88,6 @@ body {
   -ms-transform: translate(0, -50%);
   z-index: 2;
 }
-.title h1 {
-  width: 50%;
-}
 
 main {
   width: 100%;
@@ -103,19 +100,6 @@ main .main_description {
   font-size: 1.8rem;
   letter-spacing: 5px;
   line-height: 2;
-}
-
-.face {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: auto;
-}
-.face .front {
-  top: calc(50% + 40px);
-}
-.face .back {
-  top: calc(50% - 130px);
 }
 
 .icon-cards {
@@ -168,9 +152,9 @@ main .main_description {
 
 .count_num_wrap {
   position: absolute;
-  right: 60px;
-  bottom: 60px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  right: 70px;
+  bottom: 70px;
+  border: 1px solid;
   border-radius: 100%;
   width: 150px;
   height: 150px;
@@ -178,54 +162,15 @@ main .main_description {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Oswald", sans-serif;
-}
-.count_num_wrap::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  transform: rotate(45deg);
 }
 .count_num_wrap .count_num_all {
-  position: absolute;
-  top: calc(50% - 40px);
-  left: calc(50% - 30px);
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
-.count_num_wrap span + span:before {
-  content: "";
-  width: 35px;
-  height: 1px;
-  background-color: #fff;
-  transform: rotate(-40deg);
-  display: block;
-  position: absolute;
-  top: 0;
-  left: -20px;
+.count_num_wrap .count_num_border {
+  font-size: 2rem;
 }
 .count_num_wrap .count_num_now {
-  position: absolute;
-  top: calc(50% - 20px);
-  left: 45%;
-  font-size: 5rem;
-}
-
-.item:after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(50, 50, 50, 0.7);
-  transition: 1s;
-}
-
-.item.front_slide:after {
-  content: none;
-  transition: 1s;
+  font-size: 4.2rem;
 }
 
 footer {
@@ -241,14 +186,11 @@ footer {
 .container {
   margin: 0 auto;
   width: 40vw;
-  height: 100vh;
+  height: 50vh;
   max-width: 560px;
-  max-height: 560px;
-  position: absolute;
-  top: 50%;
-  left: calc(50% - 100px);
-  transform: translateY(-50%);
-  perspective: 10000px;
+  max-height: 610px;
+  position: relative;
+  perspective: 1000px;
 }
 
 .carousel {
@@ -265,9 +207,10 @@ footer {
   align-items: center;
   position: absolute;
   background: #000;
-  width: 560px;
-  height: 560px;
+  width: 100%;
+  height: 100%;
   font-size: 5em;
+  text-align: center;
   color: #FFF;
   opacity: 0.95;
   border-radius: 10px;
@@ -280,7 +223,6 @@ footer {
   position: absolute;
   bottom: 30px;
   left: -30px;
-  width: 74%;
   padding: 5px;
   font-size: 2rem;
   background-color: #222222;
@@ -299,7 +241,7 @@ footer {
 }
 
 .a {
-  transform: rotateY(0deg) translateZ(600px);
+  transform: rotateY(0deg) translateZ(250px);
   background: #ed1c24;
   background-image: url(../img/dammy.jpg);
   background-size: cover;
@@ -308,7 +250,7 @@ footer {
 }
 
 .b {
-  transform: rotateY(120deg) translateZ(600px);
+  transform: rotateY(120deg) translateZ(250px);
   background: #0072bc;
   background-image: url(../img/dammy.jpg);
   background-size: cover;
@@ -317,7 +259,7 @@ footer {
 }
 
 .c {
-  transform: rotateY(240deg) translateZ(600px);
+  transform: rotateY(240deg) translateZ(250px);
   background: #39b54a;
   background-image: url(../img/dammy.jpg);
   background-size: cover;
@@ -353,171 +295,4 @@ footer {
 
 .prev {
   left: 5em;
-}
-
-.test {
-  width: 300px;
-  height: 300px;
-}
-
-.circle-wrap {
-  position: absolute;
-  right: 60px;
-  bottom: 60px;
-}
-
-.circle {
-  position: relative;
-  width: 150px;
-  height: 150px;
-}
-
-.circle img {
-  position: relative;
-  top: 160px;
-}
-
-.circle-right {
-  position: absolute;
-  left: 75px;
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
-}
-
-.circle-right-hidden {
-  position: relative;
-  left: -75px;
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
-  transform: rotate(0deg);
-  transform-origin: 100% 50%;
-  -webkit-animation: rotateRight 4s linear infinite;
-  animation: rotateRight 4s linear infinite;
-}
-
-@-webkit-keyframes rotateRight {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
-@keyframes rotateRight {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
-.circle-right .circle {
-  position: relative;
-  left: 160px;
-  transform: rotate(0deg);
-  transform-origin: 25% 50%;
-  -webkit-animation: rotateRight2 4s linear infinite;
-  animation: rotateRight2 4s linear infinite;
-}
-
-@-webkit-keyframes rotateRight2 {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(-180deg);
-  }
-  100% {
-    transform: rotate(-180deg);
-  }
-}
-@keyframes rotateRight2 {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(-180deg);
-  }
-  100% {
-    transform: rotate(-180deg);
-  }
-}
-.circle-left {
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
-}
-
-.circle-left-hidden {
-  position: relative;
-  left: 75px;
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
-  transform: rotate(0deg);
-  transform-origin: 0% 50%;
-  -webkit-animation: rotateLeft 4s linear infinite;
-  animation: rotateLeft 4s linear infinite;
-}
-
-@-webkit-keyframes rotateLeft {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
-@keyframes rotateLeft {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
-.circle-left .circle {
-  position: relative;
-  left: -75px;
-  transform: rotate(0deg);
-  transform-origin: 25% 50%;
-  -webkit-animation: rotateLeft2 4s linear infinite;
-  animation: rotateLeft2 4s linear infinite;
-}
-
-@-webkit-keyframes rotateLeft2 {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-180deg);
-  }
-}
-@keyframes rotateLeft2 {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-180deg);
-  }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style_old221221.css.map */
