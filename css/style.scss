@@ -227,6 +227,12 @@ main {
     }
 }
 
+@include sp {
+    body {
+        padding: 0;
+    }
+}
+
 // 共通部分
 // ------------------------
 .next {
@@ -288,6 +294,14 @@ main {
         top: calc(50% - 20px);
         left: 45%;
         font-size: 5rem;
+    }
+}
+
+@include sp {
+    .count_num_wrap {
+        &:after {
+            transform: none;
+        }
     }
 }
 
@@ -438,13 +452,44 @@ footer {
   .prev { left: 5em; }
 
 @include sp {
+    .carousel {
+        width: 100%;
+        height: auto;
+    }
     .container {
-        width: 80%;
-        height: 80%;
+        width: 100%;
+        height: auto;
+        top: 210px;
+        left: 0;
+        transform: none;
     }
     .item {
-        width: 80%;
-        height: 300px;
+        width: calc(100% - 15%);
+        height: 250px;
+    }
+    .title {
+        top: 100px;
+        left: 0;
+    }
+    .title h1 {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .a {
+        transform: rotateY(0deg) translateZ(200px);
+    }
+    .b {
+        transform: rotateY(120deg) translateZ(200px);
+    }
+    .c {
+        transform: rotateY(240deg) translateZ(200px);
+    }
+    footer {
+        right: 10px;
+        bottom: 39%;
+    }
+    main .main_description {
+        left: 30px;
     }
 }
 // カルーセルの追記221117 END
