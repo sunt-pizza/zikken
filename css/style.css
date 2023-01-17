@@ -162,6 +162,11 @@ main .main_description {
   body {
     padding: 0;
   }
+  .inner {
+    width: 100%;
+    height: 100%;
+    padding: 35px;
+  }
 }
 .next {
   display: none;
@@ -275,7 +280,7 @@ footer {
   position: absolute;
   background: #000;
   width: 600px;
-  height: 600px;
+  height: 550px;
   font-size: 5em;
   color: #FFF;
   opacity: 0.95;
@@ -397,177 +402,40 @@ footer {
   .c {
     transform: rotateY(240deg) translateZ(200px);
   }
+  .count_num_wrap {
+    width: 110px;
+    height: 110px;
+    border: none;
+    bottom: 0;
+    right: 0;
+  }
+  .count_num_wrap span + span::before {
+    transform: rotate(-50deg);
+    top: 5px;
+    left: -20px;
+  }
+  .count_num_wrap::after {
+    width: 80%;
+    height: 80%;
+  }
+  .count_num_wrap .count_num_all {
+    font-size: 1.6rem;
+    top: calc(50% - 25px);
+    left: calc(50% - 20px);
+  }
+  .count_num_wrap .count_num_now {
+    top: calc(50% - 10px);
+    left: 50%;
+    font-size: 3rem;
+  }
   footer {
     right: 10px;
     bottom: 39%;
   }
   main .main_description {
-    left: 30px;
-  }
-}
-.test {
-  width: 300px;
-  height: 300px;
-}
-
-.circle-wrap {
-  position: absolute;
-  right: 60px;
-  bottom: 60px;
-}
-
-.circle {
-  position: relative;
-  width: 150px;
-  height: 150px;
-}
-
-.circle img {
-  position: relative;
-  top: 160px;
-}
-
-.circle-right {
-  position: absolute;
-  left: 75px;
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
-}
-
-.circle-right-hidden {
-  position: relative;
-  left: -75px;
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
-  transform: rotate(0deg);
-  transform-origin: 100% 50%;
-  -webkit-animation: rotateRight 4s linear infinite;
-  animation: rotateRight 4s linear infinite;
-}
-
-@-webkit-keyframes rotateRight {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
-@keyframes rotateRight {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
-.circle-right .circle {
-  position: relative;
-  left: 160px;
-  transform: rotate(0deg);
-  transform-origin: 25% 50%;
-  -webkit-animation: rotateRight2 4s linear infinite;
-  animation: rotateRight2 4s linear infinite;
-}
-
-@-webkit-keyframes rotateRight2 {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(-180deg);
-  }
-  100% {
-    transform: rotate(-180deg);
-  }
-}
-@keyframes rotateRight2 {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(-180deg);
-  }
-  100% {
-    transform: rotate(-180deg);
-  }
-}
-.circle-left {
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
-}
-
-.circle-left-hidden {
-  position: relative;
-  left: 75px;
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
-  transform: rotate(0deg);
-  transform-origin: 0% 50%;
-  -webkit-animation: rotateLeft 4s linear infinite;
-  animation: rotateLeft 4s linear infinite;
-}
-
-@-webkit-keyframes rotateLeft {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
-@keyframes rotateLeft {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
-.circle-left .circle {
-  position: relative;
-  left: -75px;
-  transform: rotate(0deg);
-  transform-origin: 25% 50%;
-  -webkit-animation: rotateLeft2 4s linear infinite;
-  animation: rotateLeft2 4s linear infinite;
-}
-
-@-webkit-keyframes rotateLeft2 {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-180deg);
-  }
-}
-@keyframes rotateLeft2 {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-180deg);
+    bottom: 35px;
+    left: 35px;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
   }
 }/*# sourceMappingURL=style.css.map */
