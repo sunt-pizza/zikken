@@ -235,6 +235,7 @@ main {
         width: 100%;
         height: 100%;
         padding: 35px;
+        overflow: hidden;
     }
 }
 
@@ -330,6 +331,10 @@ main {
     content: none;
     transition: 1.0s;
 }
+.item.front_slide p.carousel_title:after {
+    content: none;
+    transition: 1.0s;
+}
 // ------------------------
 // スライド数カウント
 
@@ -395,6 +400,16 @@ footer {
             padding: 5px;
             font-size: 2rem;
             background-color: #222222;
+            &::after {
+                content: "";
+                width: 100%;
+                height: -webkit-fill-available;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgba(50, 50, 50, 0.7);
+                transition: 1s;
+            }
         }
         &.carousel_category {
             position: absolute;
@@ -481,13 +496,22 @@ footer {
         margin: 0 auto;
     }
     .a {
-        transform: rotateY(0deg) translateZ(200px);
+        transform: rotateX(-10deg) rotateY(12deg) translateZ(200px);
     }
     .b {
-        transform: rotateY(120deg) translateZ(200px);
+        transform: rotateX(-10deg) rotateY(120deg) translateZ(200px);
     }
     .c {
-        transform: rotateY(240deg) translateZ(200px);
+        transform: rotateX(-10deg) rotateY(240deg) translateZ(200px);
+    }
+    .front_slide.a {
+        transform: rotateX(0deg) rotateY(12deg) translateZ(200px);
+    }
+    .front_slide.b {
+        transform: rotateX(0deg) rotateY(120deg) translateZ(200px);
+    }
+    .front_slide.c {
+        transform: rotateX(0deg) rotateY(240deg) translateZ(200px);
     }
     .count_num_wrap {
         width: 110px;
