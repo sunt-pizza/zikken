@@ -1,23 +1,34 @@
-let carousel = $(".carousel"),
-      currdeg  = 0;
+// カルーセルの回転
+let carousel_all = document.getElementById("carousel");
+let rotate_count = 0;
 
-$(".next").on("click", { d: "n" }, rotate);
-$(".prev").on("click", { d: "p" }, rotate);
+window.addEventListener('DOMContentLoaded', () => {
+  setInterval(() => {
+    carousel_all.style.transform = `rotate3d(-90, 0, 0, 5deg) rotateY(${rotate_count}deg)`;
+    rotate_count += 120;
+  }, 4000);
+});
 
-function rotate(e){
-  if(e.data.d=="n"){
-    currdeg = currdeg - 120;
-  }
-  if(e.data.d=="p"){
-    currdeg = currdeg + 120;
-  }
-  carousel.css({
-    "-webkit-transform": "rotateY("+currdeg+"deg)",
-    "-moz-transform": "rotateY("+currdeg+"deg)",
-    "-o-transform": "rotateY("+currdeg+"deg)",
-    "transform": "rotateY("+currdeg+"deg)"
-  });
-}
+// let carousel = $(".carousel"),
+//       currdeg  = 0;
+
+// $(".next").on("click", { d: "n" }, rotate);
+// $(".prev").on("click", { d: "p" }, rotate);
+
+// function rotate(e){
+//   if(e.data.d=="n"){
+//     currdeg = currdeg - 120;
+//   }
+//   if(e.data.d=="p"){
+//     currdeg = currdeg + 120;
+//   }
+//   carousel.css({
+//     "-webkit-transform": "rotateY("+currdeg+"deg)",
+//     "-moz-transform": "rotateY("+currdeg+"deg)",
+//     "-o-transform": "rotateY("+currdeg+"deg)",
+//     "transform": "rotateY("+currdeg+"deg)"
+//   });
+// }
 
 // 4秒ごとに「next」のボタンを押す
 autoFlipster = function(){

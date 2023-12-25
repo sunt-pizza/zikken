@@ -248,6 +248,7 @@ footer {
   height: 600px;
   transition: transform 1s;
   transform-style: preserve-3d;
+  transform: rotate3d(-90, 0, 0, 5deg) rotateY(0deg);
 }
 
 .item {
