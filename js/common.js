@@ -1,13 +1,14 @@
 // カルーセルの回転
 let carousel_all = document.getElementById("carousel");
-let rotate_count = 0;
-
+let rotate_count = -120; // 1回転目から動かすために初期指定に「-120」を指定
 window.addEventListener('DOMContentLoaded', () => {
   setInterval(() => {
     carousel_all.style.transform = `rotate3d(-90, 0, 0, 5deg) rotateY(${rotate_count}deg)`;
-    rotate_count += 120;
+    rotate_count -= 120;
   }, 4000);
 });
+
+
 
 // let carousel = $(".carousel"),
 //       currdeg  = 0;
@@ -31,10 +32,10 @@ window.addEventListener('DOMContentLoaded', () => {
 // }
 
 // 4秒ごとに「next」のボタンを押す
-autoFlipster = function(){
-  $('.next').click();
-};
-const timerID = setInterval(autoFlipster, 4000);
+// autoFlipster = function(){
+//   $('.next').click();
+// };
+// const timerID = setInterval(autoFlipster, 4000);
 // 4秒ごとに「next」のボタンを押す END
 
 

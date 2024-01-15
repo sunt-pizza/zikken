@@ -105,6 +105,9 @@ $theme_color: #222;
 // アニメーション END
 html {
     font-size: 62.5%;
+    @include sp {
+        overflow-x: hidden;
+    }
 }
 
 body {
