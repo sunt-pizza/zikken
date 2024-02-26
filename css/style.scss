@@ -5,770 +5,618 @@ $sp: 960px; // pc
 $sp_se: 320px; // sp_se
 $pc_change: 1500px;
 @mixin tab {
-    @media (max-width: ($tab)) {
-        @content;
-    }
+  @media (max-width: ($tab)) {
+    @content;
+  }
 }
 
 @mixin sp {
-    @media (max-width: ($sp)) {
-        @content;
-    }
+  @media (max-width: ($sp)) {
+    @content;
+  }
 }
 
 @mixin sp_se {
-    @media (max-width: ($sp_se)) {
-        @content;
-    }
+  @media (max-width: ($sp_se)) {
+    @content;
+  }
 }
 
 @mixin pc_ctrl {
-    @media (max-width: ($pc_ctrl)) {
-        @content;
-    }
+  @media (max-width: ($pc_ctrl)) {
+    @content;
+  }
 }
 
 @mixin max {
-    @media (max-width: ($max)) {
-        @content;
-    }
+  @media (max-width: ($max)) {
+    @content;
+  }
 }
 
 @mixin superwide {
-    @media (max-width: ($superwide)) {
-        @content;
-    }
+  @media (max-width: ($superwide)) {
+    @content;
+  }
 }
 
 @mixin lowheight {
-    @media (max-height: ($lowheight)) {
-        @content;
-    }
+  @media (max-height: ($lowheight)) {
+    @content;
+  }
 }
 
 @mixin lowheight02 {
-    @media (max-height: ($lowheight02)) {
-        @content;
-    }
+  @media (max-height: ($lowheight02)) {
+    @content;
+  }
 }
 
 $theme_color: #222;
 // ------------------------
 // 宣言 END
+
 // アニメーション
 // ------------------------
 @mixin keyframes($animation-name) {
-    @keyframes #{$animation-name} {
-        @content;
-    }
+  @keyframes #{$animation-name} {
+    @content;
+  }
 }
 
 @mixin animation($animation-name) {
-    -webkit-animation: $animation-name;
-            animation: $animation-name;
+  -webkit-animation: $animation-name;
+  animation: $animation-name;
 
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 @include keyframes(fadein) {
-    0% {
-        opacity: 0;
-        font-size: small;
-    }
-    100% {
-        opacity: 1;
-        font-size: larger;
-    }
+  0% {
+    opacity: 0;
+    font-size: small;
+  }
+  100% {
+    opacity: 1;
+    font-size: larger;
+  }
 }
 
 @include keyframes(slidein) {
-    0% {
-        transform: translateX(-20px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0px);
-        opacity: 1;
-    }
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 
 .fadein {
-    @include animation(fadein 3s);
+  @include animation(fadein 3s);
 }
 
 .slidein {
-    @include animation(slidein 3s);
+  @include animation(slidein 3s);
 }
 
 // ------------------------
 // アニメーション END
+
+// 共通部分
+// ------------------------
 html {
-    font-size: 62.5%;
-    @include sp {
-        overflow-x: hidden;
-    }
+  font-size: 62.5%;
+  @include sp {
+    overflow-x: hidden;
+  }
 }
 
 body {
-    position: relative;
-    display: flex;
-    overflow-x: hidden;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh!important;
-    padding: 70px 0;
-    color: #fff;
-    background-image: url(../img/bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 1.6rem;
-}
-
-.inner {
-    max-width: 1440px;
-    margin: 0 auto;
+  position: relative;
+  display: flex;
+  overflow-x: hidden;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  background-image: url(../img/common/bg.png);
+  background-repeat: repeat-y;
+  background-size: cover;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.6rem;
+  background-color: #141414;
 }
 
 .title {
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    left: 80px;
-    -webkit-transform: translate(0, -50%);
-        -ms-transform: translate(0, -50%);
-            transform: translate(0, -50%);
-    h1 {
-        width: 50%;
-    }
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 80px;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  h1 {
+    width: 50%;
+  }
 }
 
 main {
-    width: 100%;
-    height: 100%;
-    &::after {
-        // content: "";
-        // width: 100vw;
-        // height: 100vh;
-        // background-image: url(../img/line.png);
-        // background-size: contain;
-        // background-repeat: no-repeat;
-        // background-position: center;
-        // display: block;
-    }
-    .main_description {
-        position: absolute;
-        bottom: 60px;
-        left: 70px;
-        letter-spacing: 5px;
-        font-size: 1.8rem;
-        line-height: 2;
-    }
+  width: 100%;
+  height: 100%;
+  .main_description {
+    position: absolute;
+    bottom: 35px;
+    left: 35px;
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+    line-height: 2;
+  }
 }
+// ------------------------
+// 共通部分 END
+
+// header
+// ------------------------
+// ハンバーガーメニューの大きさ
+$hamburger_width: 36px;
+$hamburger_height: 26px;
+
+header {
+  .hamburger_menu_wrap {
+    .nav_open_btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: $hamburger_width;
+      height: $hamburger_height;
+      cursor: pointer;
+      z-index: 99;
+      @include sp {
+        top: 10px;
+        left: 10px;
+      }
+      span {
+        position: absolute;
+        width: $hamburger_width;
+        height: 2px;
+        border-radius: 2px;
+        display: inline-block;
+        background: #fff;
+        transition: all 0.4s;
+        &:nth-of-type(2) {
+          top: 12px;
+        }
+        &:nth-of-type(3) {
+          top: 24px;
+        }
+      }
+    }
+    .nav_menu {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      width: auto;
+      font-size: 40px;
+      text-align: center;
+      z-index: 10;
+      visibility: hidden;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      display: block;
+      li {
+        line-height: 1;
+        & + li {
+          margin-top: 50px;
+        }
+      }
+    }
+    .click_nav_bg {
+      background-color: #c3c3c3;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: translateY(-100%);
+      transition: 0.5s;
+    }
+    &.active {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      .nav_menu {
+        visibility: visible;
+        opacity: 1;
+        overflow: initial;
+        max-height: none;
+        transition: visibility 0s, opacity 0.5s ease, max-height 0.5s ease;
+      }
+      .click_nav_bg {
+        transform: translateY(0);
+        transition: 0.5s;
+      }
+      .nav_open_btn {
+        span {
+          &:nth-of-type(1) {
+            transform: translateY(14px) rotate(-30deg);
+          }
+          &:nth-of-type(2) {
+            opacity: 0;
+          }
+          &:nth-of-type(3) {
+            transform: translateY(-10px) rotate(30deg);
+          }
+        }
+      }
+    }
+    &.color_change {
+      .nav_open_btn {
+        span {
+          background-color: #141414;
+        }
+      }
+    }
+  }
+}
+// ------------------------
+// header
 
 // 背景のライン
+// ------------------------
 .face {
-    position: absolute;
-    top: 40%;
-    left: 0;
-    width: auto;
-    .front {
-        top: calc(50% + 40px);
-    }
-    .back {
-        top: calc(50% - 130px);
-    }
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: auto;
 }
+// ------------------------
 // 背景のライン END
-
-// カルーセル 画像
-.icon-cards {
-    position: absolute;
-    top: calc(50% - 250px);
-    right: 250px;
-    width: 60vw;
-    max-width: 500px;
-    height: 40vw;
-    max-height: 500px;
-    margin: 0;
-    transform-origin: center;
-    color: white;
-
-    perspective: 1000px;
-}
-
-.icon-cards__content {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform-origin: center;
-}
-
-.checkbox__label {
-    margin-left: 5px;
-    cursor: pointer;
-    vertical-align: middle;
-}
-
-// スライド数カウント END
-// カルーセル内テキスト
-.carousel_txt {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    font-size: 2rem;
-    ul {
-        li {
-            .item_title {
-                max-width: 450px;
-            }
-        }
-    }
-}
-
-@include sp {
-    body {
-        padding: 0;
-    }
-    .inner {
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-    }
-}
-
-// 共通部分
-// ------------------------
-.next {
-    display: none;
-}
-.prev {
-    display: none;
-}
-// ------------------------
-// 共通部分
-
 
 // スライド数カウント
 // ------------------------
 .count_num_wrap {
+  position: absolute;
+  right: 3%;
+  bottom: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgba($color: #fff, $alpha: 0.5);
+  border-radius: 100%;
+  font-family: "Oswald", sans-serif;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    transform: rotate(45deg);
+    border: 1px solid #fff;
+    border-radius: 50%;
+  }
+  .count_num_all {
     position: absolute;
-    right: 3%;
-    bottom: 30px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    width: 150px;
-    height: 150px;
-    border: 1px solid rgba($color: #fff, $alpha: .5);
-    border-radius: 100%;
-    font-family: 'Oswald', sans-serif;
-    &::after {
-        content: '';
-        width: 100%;
-        height: 100%;
-        transform: rotate(45deg);
-        border: 1px solid #fff;
-        border-radius: 50%;
-    }
-    .count_num_all {
+    top: calc(50% - 25px);
+    left: calc(50% - 20px);
+    font-size: 1.6rem;
+  }
+  span {
+    & + span {
+      &:before {
+        content: "";
         position: absolute;
-        top: calc(50% - 40px);
-        left: calc(50% - 30px);
-        font-size: 1.6rem;
+        top: 0;
+        left: -20px;
+        display: block;
+        width: 35px;
+        height: 1px;
+        transform: rotate(-40deg);
+        background-color: #fff;
+      }
     }
-    span {
-        & + span {
-            &:before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: -20px;
-                display: block;
-                width: 35px;
-                height: 1px;
-                transform: rotate(-40deg);
-                background-color: #fff;
-            }
-        }
-    }
-    .count_num_now {
-        position: absolute;
-        top: calc(50% - 20px);
-        left: 45%;
-        font-size: 5rem;
-    }
+  }
+  .count_num_now {
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 50%;
+    font-size: 5rem;
+  }
 }
 
 @include sp {
-    .count_num_wrap {
-        &:after {
-            transform: none;
-        }
+  .count_num_wrap {
+    &:after {
+      transform: none;
     }
+  }
 }
 
 // ------------------------
-// スライド数カウント
+// スライド数カウント END
 
 // スライドの色変更
 // ------------------------
 .item:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: 1.0s;
-    background-color: rgba(50,50,50,.7);
-}
-
-.item.front_slide {
-    // transform: rotate3d(0, 0, 0, 0deg) translateZ(100px);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+  background-color: rgba(50, 50, 50, 0.7);
 }
 
 .item.front_slide:after {
-    content: none;
-    transition: 1.0s;
+  content: none;
+  transition: 1s;
 }
 .item.front_slide p.carousel_title:after {
-    content: none;
-    transition: 1.0s;
+  content: none;
+  transition: 1s;
 }
 
 // ------------------------
-// スライド数カウント
+// スライド数カウント END
 
-
-// フッター
-footer {
-    position: absolute;
-    right: 70px;
-    bottom: 50%;
-    letter-spacing: 5px;
-    font-size: 10px;
-
-    writing-mode: vertical-lr;
-}
-
-// フッター END
-
-
-
-// カルーセルの追記221117
+// メインのスライド
+// ------------------------
 .container {
-    position: absolute;
-    top: 47%;
-    left: calc(50% - 100px);
-    width: 100%;
-    max-width: 600px;
-    height: 100vh;
-    max-height: 600px;
-    margin: 0 auto;
-    transform: translateY(-50%);
-    // perspective: 10000px;
+  position: absolute;
+  top: 47%;
+  left: calc(50% - 100px);
+  width: 100%;
+  max-width: 600px;
+  height: 100vh;
+  max-height: 600px;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  @include sp {
+    top: 35%;
+    left: 40px;
+    height: auto;
+  }
 }
 
 .carousel {
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-    transform: rotate3d(-90, 0, 0, 5deg) rotateY(0deg);
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  transform: rotate3d(-90, 0, 0, 5deg) rotateY(0deg);
+  @include sp {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .item {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 600px;
-    height: 550px;
-    opacity: .95;
-    color: #fff;
-    border-radius: 10px;
-    background: #000;
-    font-size: 5em;
-    a {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 550px;
+  opacity: 0.95;
+  color: #fff;
+  border-radius: 10px;
+  background: #000;
+  font-size: 5em;
+  @include sp {
+    width: calc(100% - 15%);
+    height: 250px;
+  }
+  a {
+    width: 100%;
+    height: 100%;
+  }
+  p {
+    &.carousel_title {
+      position: absolute;
+      bottom: 30px;
+      left: -30px;
+      width: 74%;
+      padding: 5px;
+      background-color: #222;
+      font-size: 2rem;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: 100%;
+        height: -webkit-fill-available;
+        transition: 1s;
+        background-color: rgba(50, 50, 50, 0.7);
+      }
     }
-    p {
-        &.carousel_title {
-            position: absolute;
-            bottom: 30px;
-            left: -30px;
-            width: 74%;
-            padding: 5px;
-            background-color: #222;
-            font-size: 2rem;
-            &::after {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: -webkit-fill-available;
-                transition: 1s;
-                background-color: rgba(50, 50, 50, .7);
-            }
-        }
-        &.carousel_category {
-            position: absolute;
-            bottom: -30px;
-            left: -20px;
-            font-size: 1.4rem;
-        }
-        &.carousel_date {
-            position: absolute;
-            right: 0;
-            bottom: -30px;
-            font-size: 1.4rem;
-        }
+    &.carousel_category {
+      position: absolute;
+      bottom: -30px;
+      left: -20px;
+      font-size: 1.4rem;
     }
+    &.carousel_date {
+      position: absolute;
+      right: 0;
+      bottom: -30px;
+      font-size: 1.4rem;
+    }
+  }
 }
 
 .a {
-    transform: rotateY(0deg) translateZ(600px);
-    background: #ed1c24;
-    background-image: url(../img/dammy.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  transform: rotateY(0deg) translateZ(600px);
+  background: #ed1c24;
+  background-image: url(../img/common/dammy.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .b {
-    transform: rotateY(120deg) translateZ(600px);
-    background: #0072bc;
-    background-image: url(../img/dammy.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  transform: rotateY(120deg) translateZ(600px);
+  background: #0072bc;
+  background-image: url(../img/common/dammy.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .c {
-    transform: rotateY(240deg) translateZ(600px);
-    background: #39b54a;
-    background-image: url(../img/dammy.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.next,
-.prev {
-    position: absolute;
-    top: 100px;
-    padding: 1em 2em;
-    cursor: pointer;
-    transition: box-shadow .1s, top .1s;
-    color: #444;
-    border-top: 1px solid #fff;
-    border-radius: 5px;
-    background: #ccc;
-    box-shadow: 0 5px 0 #999;
-}
-.next:hover,
-.prev:hover {
-    color: #000;
-}
-.next:active,
-.prev:active {
-    top: 104px;
-    box-shadow: 0 1px 0 #999;
-}
-.next {
-    right: 5em;
-}
-.prev {
-    left: 5em;
+  transform: rotateY(240deg) translateZ(600px);
+  background: #39b54a;
+  background-image: url(../img/common/dammy.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 @include sp {
-    .carousel {
-        width: 100%;
-        height: auto;
-    }
-    .container {
-        top: 35%;
-        left: 40px;
-        width: 100%;
-        height: auto;
-        transform: none;
-    }
-    .item {
-        width: calc(100% - 15%);
-        height: 250px;
-    }
-    .title {
-        top: 20px;
-        left: 0;
-        transform: none;
-    }
-    .title h1 {
-        width: 70%;
-        margin: 0 auto;
-    }
-    .a {
-        transform: rotateX(-10deg) rotateY(0deg) translateZ(125px);
-    }
-    .b {
-        transform: rotateX(-10deg) rotateY(120deg) translateZ(125px);
-    }
-    .c {
-        transform: rotateX(-10deg) rotateY(240deg) translateZ(125px);
-    }
-    // .front_slide.a {
-    //     transform: rotateX(0deg) rotateY(12deg) translateZ(200px);
-    // }
-    // .front_slide.b {
-    //     transform: rotateX(0deg) rotateY(120deg) translateZ(200px);
-    // }
-    // .front_slide.c {
-    //     transform: rotateX(0deg) rotateY(240deg) translateZ(200px);
-    // }
-    .count_num_wrap {
-        right: 0;
-        bottom: 0;
-        width: 110px;
-        height: 110px;
-        border: none;
-        span {
-            & + span {
-                &::before {
-                    top: 5px;
-                    left: -20px;
-                    transform: rotate(-50deg);
-                }
-            }
-        }
-        &::after {
-            width: 80%;
-            height: 80%;
-        }
-        .count_num_all {
-            top: calc(50% - 25px);
-            left: calc(50% - 20px);
-            font-size: 1.6rem;
-        }
-        .count_num_now {
-            top: calc(50% - 10px);
-            left: 50%;
-            font-size: 3rem;
-        }
-    }
-    footer {
-        right: 10px;
-        bottom: 39%;
-    }
-    main {
-        .main_description {
-            bottom: 35px;
-            left: 35px;
-            letter-spacing: 3px;
-            font-size: 1.2rem;
-        }
-    }
+  .title {
+    top: 20px;
+    left: 0;
+    transform: none;
+  }
+  .title h1 {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .a {
+    transform: rotateX(-10deg) rotateY(0deg) translateZ(125px);
+  }
+  .b {
+    transform: rotateX(-10deg) rotateY(120deg) translateZ(125px);
+  }
+  .c {
+    transform: rotateX(-10deg) rotateY(240deg) translateZ(125px);
+  }
 }
-// カルーセルの追記221117 END
+
+// ------------------------
+// メインのスライド END
+
+// フッター
+// ------------------------
+footer {
+  position: absolute;
+  right: 10px;
+  bottom: 39%;
+  letter-spacing: 5px;
+  font-size: 10px;
+
+  writing-mode: vertical-lr;
+}
+// ------------------------
+// フッター END
 
 
-// 円形に表示するやつ
-// .test {
-//     width: 300px;
-//     height: 300px;
-// }
-// .circle-wrap {
-//     position: absolute;
-//     right: 60px;
-//     bottom: 60px;
-// }
-// .circle {
-//     position: relative;
-//     width: 150px;
-//     height: 150px;
-// }
-// .circle img {
-//     position: relative;
-//     top: 160px;
-// }
+// ========================
+// 下層共通
+// ========================
+.underlayer {
+  background-attachment: fixed;
+}
 
-// .circle-right {
-//     position: absolute;
-//     left: 75px;
-//     width: 150px;
-//     height: 150px;
-//     overflow: hidden;
-// }
-// .circle-right-hidden {
-//     position: relative;
-//     left: -75px;
-//     width: 150px;
-//     height: 150px;
-//     overflow: hidden;
-//     -webkit-transform: rotate(0deg);
-//     transform: rotate(0deg);
-//     -webkit-transform-origin: 100% 50%;
-//     transform-origin: 100% 50%;
-//     -webkit-animation: rotateRight 4s linear infinite;
-//     animation: rotateRight 4s linear infinite;
-// }
-// @-webkit-keyframes rotateRight {
-//     0% {
-//         -webkit-transform: rotate(0deg);
-//         transform: rotate(0deg);
-//     }
-//     50% {
-//         -webkit-transform: rotate(180deg);
-//         transform: rotate(180deg);
-//     }
-//     100% {
-//         -webkit-transform: rotate(180deg);
-//         transform: rotate(180deg);
-//     }
-// }
-// @keyframes rotateRight {
-//     0% {
-//         -webkit-transform: rotate(0deg);
-//         transform: rotate(0deg);
-//     }
-//     50% {
-//         -webkit-transform: rotate(180deg);
-//         transform: rotate(180deg);
-//     }
-//     100% {
-//         -webkit-transform: rotate(180deg);
-//         transform: rotate(180deg);
-//     }
-// }
-// .circle-right .circle {
-//     position: relative;
-//     left: 160px;
-//     -webkit-transform: rotate(0deg);
-//     transform: rotate(0deg);
-//     -webkit-transform-origin: 25% 50%;
-//     transform-origin: 25% 50%;
-//     -webkit-animation: rotateRight2 4s linear infinite;
-//     animation: rotateRight2 4s linear infinite;
-// }
-// @-webkit-keyframes rotateRight2 {
-//     0% {
-//         -webkit-transform: rotate(0deg);
-//         transform: rotate(0deg);
-//     }
-//     50% {
-//         -webkit-transform: rotate(-180deg);
-//         transform: rotate(-180deg);
-//     }
-//     100% {
-//         -webkit-transform: rotate(-180deg);
-//         transform: rotate(-180deg);
-//     }
-// }
-// @keyframes rotateRight2 {
-//     0% {
-//         -webkit-transform: rotate(0deg);
-//         transform: rotate(0deg);
-//     }
-//     50% {
-//         -webkit-transform: rotate(-180deg);
-//         transform: rotate(-180deg);
-//     }
-//     100% {
-//         -webkit-transform: rotate(-180deg);
-//         transform: rotate(-180deg);
-//     }
-// }
+#mv {
+  position: relative;
+  height: 100vh;
+  .title {
+    font-size:clamp(3rem, 4vw, 5rem);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    letter-spacing: .2em;
+    span {
+      margin-top: 10px;
+      display: block;
+      font-size:clamp(1.5rem, 2vw, 3rem);
+    }
+  }
+}
 
-// .circle-left {
-//     width: 150px;
-//     height: 150px;
-//     overflow: hidden;
-// }
-// .circle-left-hidden {
-//     position: relative;
-//     left: 75px;
-//     width: 150px;
-//     height: 150px;
-//     overflow: hidden;
-//     -webkit-transform: rotate(0deg);
-//     transform: rotate(0deg);
-//     -webkit-transform-origin: 0% 50%;
-//     transform-origin: 0% 50%;
-//     -webkit-animation: rotateLeft 4s linear infinite;
-//     animation: rotateLeft 4s linear infinite;
-// }
-// @-webkit-keyframes rotateLeft {
-//     0% {
-//         -webkit-transform: rotate(0deg);
-//         transform: rotate(0deg);
-//     }
-//     50% {
-//         -webkit-transform: rotate(0deg);
-//         transform: rotate(0deg);
-//     }
-//     100% {
-//         -webkit-transform: rotate(180deg);
-//         transform: rotate(180deg);
-//     }
-// }
-// @keyframes rotateLeft {
-//     0% {
-//         -webkit-transform: rotate(0deg);
-//         transform: rotate(0deg);
-//     }
-//     50% {
-//         -webkit-transform: rotate(0deg);
-//         transform: rotate(0deg);
-//     }
-//     100% {
-//         -webkit-transform: rotate(180deg);
-//         transform: rotate(180deg);
-//     }
-// }
-// .circle-left .circle {
-//     position: relative;
-//     left: -75px;
-//     -webkit-transform: rotate(0deg);
-//     transform: rotate(0deg);
-//     -webkit-transform-origin: 25% 50%;
-//     transform-origin: 25% 50%;
-//     -webkit-animation: rotateLeft2 4s linear infinite;
-//     animation: rotateLeft2 4s linear infinite;
-// }
-// @-webkit-keyframes rotateLeft2 {
-//     0% {
-//         -webkit-transform: rotate(0deg);
-//         transform: rotate(0deg);
-//     }
-//     50% {
-//         -webkit-transform: rotate(0deg);
-//         transform: rotate(0deg);
-//     }
-//     100% {
-//         -webkit-transform: rotate(-180deg);
-//         transform: rotate(-180deg);
-//     }
-// }
-// @keyframes rotateLeft2 {
-//     0% {
-//         -webkit-transform: rotate(0deg);
-//         transform: rotate(0deg);
-//     }
-//     50% {
-//         -webkit-transform: rotate(0deg);
-//         transform: rotate(0deg);
-//     }
-//     100% {
-//         -webkit-transform: rotate(-180deg);
-//         transform: rotate(-180deg);
-//     }
-// }
-// 円形に表示するやつ END
+#contnets {
+  background-color: #fff;
+  padding: 70px 5%;
+  color: #000;
+}
+
+// ========================
+// works
+// ========================
+#works {
+  height: auto;
+  .works_list_wrap {
+    width: min(90%, 1400px);
+    margin: 0 auto;
+    .works_list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      @include sp {
+        grid-template-columns: 1fr;
+      }
+      li {
+        a {
+          display: grid;
+          grid-template-rows: subgrid;
+          color: #000;
+          & > * {
+            margin-top: 15px;
+          }
+          img {
+            margin-top: 0;
+          }
+          p {
+            line-height: 1.5;
+          }
+          .case_name {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ========================
+// profile
+// ========================
+.profile_wrap {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0 50px;
+}
+
+.human_wrap {
+  width: max(200px, 15vw);
+}
+
+.human_wrap img {
+  border-radius: 50%;
+}
+
+.text_wrap {
+  display: grid;
+  place-content: center;
+}
+
+.text_wrap p {
+  color: #000;
+  line-height: 1.5;
+}

@@ -10,16 +10,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="デザイナーとエンジニアが勉強・やりたい表現を試すことを目的とした実験場である">
     <meta name="format-detection" content="telephone=no">
-    <title>実験場 | やりたいことを試す場所</title>
-    <link rel="shortcut icon" type="image/svg+xml" sizes="any" href="img/favicon.ico" />
-    <link rel="apple-touch-icon" href="img/favicon.ico">
-    <meta property="og:image" content="img/ogp.jpg">
+    <title>top | 大関健一のポートフォリオ</title>
+    <link rel="shortcut icon" type="image/svg+xml" sizes="any" href="img/common/favicon.ico" />
+    <link rel="apple-touch-icon" href="img/common/favicon.ico">
+    <meta property="og:image" content="img/common/ogp.jpg">
 
     <!-- Google font 読み込み -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-
 
     <!-- css読み込み -->
     <link rel="stylesheet" media="all" href="css/destyle.css">
@@ -35,16 +34,30 @@
     <div class="inner">
 
         <header>
-            <div class="title">
-                <h1><img src="img/ttl.png" alt="実験場 jikkenjo.web"></h1>
-            </div>
+            <nav class="hamburger_menu_wrap">
+              <div class="nav_open_btn">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <ul class="nav_menu">
+                <li><a href="index.html">top</a></li>
+                <li><a href="profile.html">profile</a></li>
+                <li><a href="works.html">works</a></li>
+                <!-- <li>contact</li> -->
+              </ul>
+              <div class="click_nav_bg"></div>
+            </nav>
         </header>
 
         <main>
-            <h2 class="main_description">デザイナーとエンジニアが<br class="pc">勉強・やりたい表現を試すことを<br class="pc">目的とした実験場である。</h2>
+          <div class="title">
+            <h1><img src="img/common/ttl.png" alt="実験場 jikkenjo.web"></h1>
+          </div>
+            <h2 class="main_description">とあるエンジニアが<br class="pc">勉強・やりたい表現を試すことを<br class="pc">目的とした実験場である。</h2>
 
             <!-- 背景のライン -->
-            <div class="face front"><img src="img/line.png" alt="背景のライン"></div>
+            <div class="face front"><img src="img/top/line.png" alt="背景のライン"></div>
             <!-- <div class="face back"><img src="img/line_back.png" alt="背景のライン"></div> -->
             <!-- 背景のライン END -->
 
@@ -65,11 +78,7 @@
                     </a></div>
                 </div>
             </div>
-            <div class="next">Next</div>
-            <div class="prev">Prev</div>
             <!-- カルーセル部分 END -->
-
-
 
             <!-- スライド数カウント -->
             <div class="count_num_wrap">
@@ -82,44 +91,16 @@
             </div>
             <!-- スライド数カウント -->
 
-            
-            <!-- 円形に表示するやつ -->
-            <!-- <div class="circle-wrap">
-                <div class="circle-right">
-                    <div class="circle-right-hidden">
-                        <div class="circle">
-                            <div class="test">
-                                <span id="count_num_all" class="count_num_all">01</span>
-                                <span class="count_num_now" id="count_num_now">01</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="circle-left">
-                    <div class="circle-left-hidden">
-                        <div class="circle">
-                            <div class="test">
-                                <span id="count_num_all" class="count_num_all">01</span>
-                                <span class="count_num_now" id="count_num_now">01</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- 円形に表示するやつ END -->
-
-
-
         </main>
 
         <footer id="footer">
-            <p>© 2022 jikkenjo.web</p>
+            <p>© 2024 oseki kenichi</p>
         </footer>
     </div>
 
     <!-- JavaScript読み込み -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/common.js"></script>
+    <script src="js/top.js"></script>
 </body>
 
 </html>
