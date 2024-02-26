@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -30,6 +31,7 @@
 
 html {
   font-size: 62.5%;
+  height: -webkit-fill-available;
 }
 @media (max-width: 960px) {
   html {
@@ -45,7 +47,7 @@ body {
   flex-direction: column;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   color: #fff;
   background-image: url(../img/common/bg.png);
   background-repeat: repeat-y;
@@ -53,6 +55,11 @@ body {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 1.6rem;
   background-color: #141414;
+}
+
+p, h1, h2, h3, h4, h5, th, td, span {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
 }
 
 .title {
@@ -77,6 +84,18 @@ main .main_description {
   letter-spacing: 3px;
   font-size: 1.2rem;
   line-height: 2;
+}
+
+.title_style01 {
+  font-size: 32px;
+  text-align: center;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+}
+@media (max-width: 960px) {
+  .title_style01 {
+    font-size: 24px;
+  }
 }
 
 header .hamburger_menu_wrap .nav_open_btn {
@@ -135,7 +154,8 @@ header .hamburger_menu_wrap .nav_menu li + li {
 header .hamburger_menu_wrap .click_nav_bg {
   background-color: #c3c3c3;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
+  min-height: -webkit-fill-available;
   position: fixed;
   top: 0;
   left: 0;
@@ -144,7 +164,7 @@ header .hamburger_menu_wrap .click_nav_bg {
 }
 header .hamburger_menu_wrap.active {
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   position: fixed;
   top: 0;
   left: 0;
@@ -205,8 +225,8 @@ header .hamburger_menu_wrap.color_change .nav_open_btn span {
 }
 .count_num_wrap .count_num_all {
   position: absolute;
-  top: calc(50% - 25px);
-  left: calc(50% - 20px);
+  top: calc(50% - 30px);
+  left: calc(50% - 25px);
   font-size: 1.6rem;
 }
 .count_num_wrap span + span:before {
@@ -259,14 +279,15 @@ header .hamburger_menu_wrap.color_change .nav_open_btn span {
   left: calc(50% - 100px);
   width: 100%;
   max-width: 600px;
-  height: 100vh;
+  height: 100dvh;
+  min-height: -webkit-fill-available;
   max-height: 600px;
   margin: 0 auto;
   transform: translateY(-50%);
 }
 @media (max-width: 960px) {
   .container {
-    top: 35%;
+    top: 55%;
     left: 40px;
     height: auto;
   }
@@ -401,10 +422,28 @@ footer {
 .underlayer {
   background-attachment: fixed;
 }
+.underlayer p {
+  color: #202020;
+}
+@media (max-width: 960px) {
+  .underlayer footer {
+    width: -moz-max-content;
+    width: max-content;
+    left: 50%;
+    right: auto;
+    bottom: 20px;
+    color: #000;
+    writing-mode: initial;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+  }
+}
 
 #mv {
   position: relative;
-  height: 100vh;
+  height: 100dvh;
+  min-height: -webkit-fill-available;
 }
 #mv .title {
   font-size: clamp(3rem, 4vw, 5rem);
@@ -463,14 +502,47 @@ footer {
   font-weight: bold;
 }
 
+.rating1::after {
+  content: "★☆☆☆☆";
+}
+
+.rating2::after {
+  content: "★★☆☆☆";
+}
+
+.rating3::after {
+  content: "★★★☆☆";
+}
+
+.rating4::after {
+  content: "★★★★☆";
+}
+
+.rating5::after {
+  content: "★★★★★";
+}
+
 .profile_wrap {
+  margin-top: 50px;
   display: grid;
   grid-template-columns: auto auto;
+  align-items: center;
   gap: 0 50px;
+}
+@media (max-width: 960px) {
+  .profile_wrap {
+    grid-template-columns: auto;
+  }
 }
 
 .human_wrap {
   width: max(200px, 15vw);
+}
+@media (max-width: 960px) {
+  .human_wrap {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
 
 .human_wrap img {
@@ -478,11 +550,74 @@ footer {
 }
 
 .text_wrap {
-  display: grid;
-  place-content: center;
+  margin-top: 20px;
 }
 
 .text_wrap p {
-  color: #000;
   line-height: 1.5;
+}
+
+.skill_wrap {
+  margin-top: 100px;
+}
+@media (max-width: 960px) {
+  .skill_wrap {
+    margin-top: 50px;
+  }
+}
+
+.skill_wrap div + div {
+  margin-top: 50px;
+}
+
+.skill_style {
+  padding: 20px;
+  border: 1px solid #a5a5a5;
+  border-radius: 5px;
+}
+
+.item_title {
+  font-size: 22px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.title_style01 + * {
+  margin-top: 30px;
+}
+
+.about_text {
+  margin-top: 20px;
+  text-align: center;
+  word-break: keep-all;
+}
+@media (max-width: 960px) {
+  .about_text {
+    word-break: normal;
+  }
+}
+
+.table {
+  width: max(50vw, 50%);
+  margin: 20px auto 0;
+}
+@media (max-width: 960px) {
+  .table {
+    width: 100%;
+  }
+}
+
+th, td {
+  width: 33.3333333333%;
+  text-align: center;
+}
+
+thead th {
+  padding-bottom: 5px;
+  font-weight: 500;
+}
+
+tbody th, tbody td {
+  border-top: 1px solid #cbcbcb;
+  padding: 5px 0;
 }/*# sourceMappingURL=style.css.map */
